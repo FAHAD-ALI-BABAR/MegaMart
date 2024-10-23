@@ -35,7 +35,7 @@ const Header = () => {
         <a className="action_container" href="pages/bag.html">
         <IoBag />
             <span className="action_name">Bag</span>
-            <span className="bag-item-count">0</span>
+            <span className="bag-item-count">00</span>
         </a>
     </div>
 </header></>
