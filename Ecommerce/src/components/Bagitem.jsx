@@ -24,7 +24,7 @@ const Bagitem = ({bagitems}) => {
       </div>
     </div>
 
-    <div className="remove-from-cart" onclick="removeFromBag(${item.id})">X</div>
+    <div className="remove-from-cart" onClick={()=>console.log("item removed from the cart")}>X</div>
   </div>
     </>
   )

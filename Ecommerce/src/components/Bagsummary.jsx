@@ -31,7 +31,8 @@ const Bagsummary = () => {
     </div>
   </div>
   <button className="btn-place-order">
-    <div className="css-xjhrni">PLACE ORDER</div>
+    <div className="css-xjhrni" onClick={()=>console.log("items is ordered")}
+    >PLACE ORDER</div>
   </button>
   </div>
   )
