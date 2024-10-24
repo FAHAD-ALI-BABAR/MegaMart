@@ -3,11 +3,13 @@ import logo from "../images/myntra_logo.webp"
 import { IoPersonCircle } from "react-icons/io5";
 import { GiHeartBeats } from "react-icons/gi";
 import { IoBag } from "react-icons/io5";
+import { NavLink } from 'react-router-dom';
 const Header = () => {
   return (
     <><header>
     <div className="logo_container">
-        <a href="#"><img className="myntra_home" src={logo} alt="Myntra Home"/></a>
+        <NavLink to="/">
+        <a href="#"><img className="myntra_home" src={logo} alt="Myntra Home"/></a></NavLink>
     </div>
     <nav className="nav_bar">
         <a href="#">Men</a>
@@ -31,12 +33,22 @@ const Header = () => {
         <GiHeartBeats />
             <span className="action_name">Wishlist</span>
         </div>
+       
+       
+        <NavLink 
+  to="/bag" 
+  style={{ color: 'inherit', textDecoration: 'none' }}
+>
+  <div className="action_container">
+    <IoBag style={{ color: 'black' }} /> {/* Set icon color */}
+    <span className="action_name">Bag</span>
+    <span className="bag-item-count">0</span>
+  </div>
+</NavLink>
 
-        <a className="action_container" href="pages/bag.html">
-        <IoBag />
-            <span className="action_name">Bag</span>
-            <span className="bag-item-count">00</span>
-        </a>
+            
+      
+       
     </div>
 </header></>
   )

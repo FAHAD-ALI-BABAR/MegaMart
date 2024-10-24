@@ -1,21 +1,17 @@
 import { useState } from 'react'
 import './App.css'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Displayitems from './components/Displayitems'
-import {items} from "./data/items.js"
+import { Route, Router, Routes } from 'react-router-dom';
+import Home from './pages/Home.jsx'
+import Bag from './pages/Bag.jsx'
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <Header/>
-    <main>
-        <div className="items-container">
-          <Displayitems items={items}/>
-        </div>
-    </main>
-   <Footer/>
+    <Routes>
+    <Route path='/' element={<Home/>}/>
+      <Route path='/bag' element={<Bag/>}/>
+    </Routes>
     </>
   )
 }
