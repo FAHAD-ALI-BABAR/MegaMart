@@ -6,7 +6,7 @@ import img5 from "../images/5.jpg"
 import img6 from "../images/6.jpg"
 import img7 from "../images/7.jpg"
 import img8 from "../images/8.jpg"
-export const items = [
+const  itemslist = [
     {
         id: '001',
         image: img1,
@@ -126,3 +126,4 @@ export const items = [
         },
     }
 ];
+export default itemslist;
