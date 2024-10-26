@@ -12,6 +12,7 @@ const itemslice=createSlice({
 })
 const MegaMart=configureStore({
     reducer:{
+        //items: will be named in useselector for accessing this
         items:itemslice.reducer
     }
 })
