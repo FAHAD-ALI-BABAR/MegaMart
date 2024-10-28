@@ -5,7 +5,7 @@ const Displayitems = ({items}) => {
     <>
     {items.map((items,key)=>(
        
-        <div key={key} className ="item-container">
+        <div key={items.id} className ="item-container">
       <img className="item-image" src={items.image} alt="item image"/>
       <div className="rating">
           {items.rating.stars} ⭐ | {items.rating.count}

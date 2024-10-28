@@ -4,7 +4,11 @@ import { IoPersonCircle } from "react-icons/io5";
 import { GiHeartBeats } from "react-icons/gi";
 import { IoBag } from "react-icons/io5";
 import { NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 const Header = () => {
+  const bag=useSelector(store=> store.bag)
+  console.log("bag contains",bag);
+  
   return (
     <><header>
     <div className="logo_container">
@@ -42,7 +46,7 @@ const Header = () => {
   <div className="action_container">
     <IoBag style={{ color: 'black' }} /> {/* Set icon color */}
     <span className="action_name">Bag</span>
-    <span className="bag-item-count">0</span>
+    <span className="bag-item-count">{bag.length}</span>
   </div>
 </NavLink>
 
